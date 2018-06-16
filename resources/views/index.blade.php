@@ -5,10 +5,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="{{ env('META_DESCRIPTION', '') }}">
+    <meta name="author" content="{{ env('META_AUTHOR', '') }}">
 
-    <title>Resume - Start Bootstrap Theme</title>
+    <title>{{ env('SITE_TITLE', 'TITLE') }}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -29,9 +29,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-block d-lg-none">{{ env('TOP_TITLE', 'PROFILE') }}</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ asset('img/profile.jpg') }}" alt="">
         </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,16 +65,16 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
-            <h1 class="mb-0">Clarence
-                <span class="text-primary">Taylor</span>
+            <h1 class="mb-0">{{ env('TOP_NAME_ONE', 'NAME1') }}
+                <span class="text-primary">{{ env('TOP_NAME_TWO', 'NAME2') }}</span>
             </h1>
-            <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
-                <a href="mailto:name@email.com">name@email.com</a>
+            <div class="subheading mb-5">{{ env('', 'Address') }} ·
+                <a href="mailto:{{ env('TOP_EMAIL', 'name@email.com') }}">{{ env('TOP_EMAIL', 'name@email.com') }}</a>
             </div>
-            <p class="mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+            <p class="mb-5">{{ env('TOP_PROFILE', 'PROFILE') }}</p>
             <ul class="list-inline list-social-icons mb-0">
                 <li class="list-inline-item">
-                    <a href="#">
+                    <a href="{{ env('FACEBOOK_URL', '#') }}">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -82,7 +82,7 @@
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="#">
+                    <a href="{{ env('TWITTER_URL', '#') }}">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -90,7 +90,7 @@
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="#">
+                    <a href="{{ env('LINKEDIN_URL', '#') }}">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -98,7 +98,7 @@
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="#">
+                    <a href="{{ env('GITHUB_URL', '#') }}">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
