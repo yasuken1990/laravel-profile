@@ -68,7 +68,7 @@
             <h1 class="mb-0">{{ env('TOP_NAME_ONE', 'NAME1') }}
                 <span class="text-primary">{{ env('TOP_NAME_TWO', 'NAME2') }}</span>
             </h1>
-            <div class="subheading mb-5">{{ env('', 'Address') }} ·
+            <div class="subheading mb-5">{{ env('TOP_ADDRESS', 'Address') }} ·
                 <a href="mailto:{{ env('TOP_EMAIL', 'name@email.com') }}">{{ env('TOP_EMAIL', 'name@email.com') }}</a>
             </div>
             <p class="mb-5">{{ env('TOP_PROFILE', 'PROFILE') }}</p>
