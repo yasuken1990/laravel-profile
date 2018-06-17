@@ -15,5 +15,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Auth::routes();
+/**
+ * WIP: on hold
+ * Auth::routes();
+ */
 Route::get('/home', 'HomeController@index')->name('home');
